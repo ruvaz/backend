@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Example Thymeleaf</h1>
+	<table>
+
+	</table>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody th:each="person:${people}">
+			<tr>
+				<th th:text="${person.name}"></th>
+				<th th:text="${person.age}"></th>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>

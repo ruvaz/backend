@@ -1,0 +1,29 @@
+#spring properties
+#spring:
+#  aop:#    auto: true
+#    proxy-target-class: false    
+#  messages:#    always-use-message-format: false
+#    basename: messages
+#    cache-seconds: -1   
+#  mvc:#    dispatch-options-request: true
+ #   dispatch-trace-request: false     #security properties     
+#security:  #oauth2:   # resource:    #  prefer-token-info: true
+     # service-id: resource
+#server:#  error:#    whitelabel:#      enabled: false
+    
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: mydbuser
+    password: mydbuser
+    
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate: 
+      ddl-auto: update  #compara las entity con DB y si difiere las actualiza, depened de las entidades primero
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
